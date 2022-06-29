@@ -1,14 +1,33 @@
 import React from 'react';
 import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Dashboard></Dashboard>
-      <Login />
-      <Error />
-    </div>
+    <Router>
+      {/* Switch renders the first child */}
+      <Switch>
+        {/* dashboard */}
+        <Route path='/' exact={true}>
+          <Dashboard></Dashboard>
+        </Route>
+
+        {/* login */}
+        <Route path='/login'>
+          <Login />
+        </Route>
+
+        {/* error */}
+        <Route path='/error'>
+          <Error />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
