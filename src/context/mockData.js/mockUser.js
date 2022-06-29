@@ -1,5 +1,5 @@
 export default {
-  login: 'john-smilga',
+  login: 'nelson-guerra',
   id: 42133389,
   node_id: 'MDQ6VXNlcjQyMTMzMzg5',
   avatar_url: 'https://avatars3.githubusercontent.com/u/42133389?v=4',
