@@ -21,6 +21,11 @@ const GithubProvider = ({ children }) => {
   const [githubUser, setGithubUser] = useState(mockUser);
   const [githubRepos, setGithubRepos] = useState(mockRepos);
   const [githubFollowers, setGithubFollowers] = useState(mockFollowers);
+  // requests loading
+  const [requests, setRequests] = useState(0);
+  const [loading, setIsLoading] = useState(false);
+  // error
+  useEffect(() => {}, []);
 
   return (
     <GithubContext.Provider
