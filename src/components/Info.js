@@ -6,11 +6,66 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 
 const UserInfo = () => {
   // in order to access context
-  const data = React.useContext(GithubContext);
+  const { githubUser } = React.useContext(GithubContext);
+  // destructuring the githubUser object to obtain what we need
+  const { public_repos, followers, following, public_gists } = githubUser;
+  // example of how it works and what we get in the console.
+  console.log(public_repos);
 
-  console.log(data);
+  // setup items with values to use within each Item component
+  const items = [
+    {
+      id: 1,
+      icon: <GoRepo className='icon' />,
+      label: 'Repos',
+      value: public_repos,
+      color: 'pink',
+    },
+    {
+      id: 2,
+      icon: <FiUsers className='icon' />,
+      label: 'Followers',
+      value: followers,
+      color: 'green',
+    },
+    {
+      id: 3,
+      icon: <FiUserPlus className='icon' />,
+      label: 'Following',
+      value: following,
+      color: 'purple',
+    },
+    {
+      id: 4,
+      icon: <GoGist className='icon' />,
+      label: 'Gists',
+      value: public_gists,
+      color: 'yellow',
+    },
+  ];
 
-  return <h2>user info component:</h2>;
+  return (
+    <section className='section'>
+      <Wrapper className='section-center'>
+        {/* iterating through the item array using spread operator */}
+        {items.map((item) => {
+          return <Item key={item.id} {...item}></Item>;
+        })}
+      </Wrapper>
+    </section>
+  );
+};
+
+const Item = ({ icon, label, value, color }) => {
+  return (
+    <article className='item'>
+      <span className={color}>{icon}</span>
+      <div>
+        <h3>{value}</h3>
+        <p>{label}</p>
+      </div>
+    </article>
+  );
 };
 
 const Wrapper = styled.section`
@@ -28,6 +83,7 @@ const Wrapper = styled.section`
     grid-template-columns: auto 1fr;
     column-gap: 3rem;
     align-items: center;
+    transition: all 0.2s ease-in-out;
     span {
       width: 3rem;
       height: 3rem;
@@ -61,6 +117,10 @@ const Wrapper = styled.section`
     .yellow {
       background: #fffbea;
       color: #f0b429;
+    }
+
+    :hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
   }
 `;
