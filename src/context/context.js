@@ -24,12 +24,40 @@ const GithubProvider = ({ children }) => {
   // requests loading
   const [requests, setRequests] = useState(0);
   const [loading, setIsLoading] = useState(false);
+  // errors
+  const [error, setError] = useState({ show: false, msg: '' });
+
+  // check rate
+  const checkRequests = () => {
+    axios(`${rootUrl}/rate_limit`)
+      .then(({ data }) => {
+        let {
+          rate: { remaining },
+        } = data;
+        setRequests(remaining);
+        if (remaining === 0) {
+          // throw an error
+          toggleError(true, 'Sorry, you have no more requests left');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  // function for error
+  function toggleError(show, msg) {
+    setError();
+  }
+
   // error
-  useEffect(() => {}, []);
+  useEffect(() => {
+    checkRequests();
+  }, []);
 
   return (
     <GithubContext.Provider
-      value={{ githubUser, githubRepos, githubFollowers }}
+      value={{ githubUser, githubRepos, githubFollowers, requests, error }}
     >
       {children}
     </GithubContext.Provider>
