@@ -13,9 +13,9 @@ function App() {
       {/* Switch renders the first child */}
       <Switch>
         {/* dashboard */}
-        <Route path='/' exact={true}>
+        <PrivateRoute path='/' exact={true}>
           <Dashboard></Dashboard>
-        </Route>
+        </PrivateRoute>
 
         {/* login */}
         <Route path='/login'>
