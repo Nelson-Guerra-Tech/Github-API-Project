@@ -9,25 +9,27 @@ import {
 
 function App() {
   return (
-    <Router>
-      {/* Switch renders the first child */}
-      <Switch>
-        {/* dashboard */}
-        <PrivateRoute path='/' exact={true}>
-          <Dashboard></Dashboard>
-        </PrivateRoute>
+    <AuthWrapper>
+      <Router>
+        {/* Switch renders the first child */}
+        <Switch>
+          {/* dashboard */}
+          <PrivateRoute path='/' exact={true}>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
 
-        {/* login */}
-        <Route path='/login'>
-          <Login />
-        </Route>
+          {/* login */}
+          <Route path='/login'>
+            <Login />
+          </Route>
 
-        {/* error */}
-        <Route path='/error'>
-          <Error />
-        </Route>
-      </Switch>
-    </Router>
+          {/* error */}
+          <Route path='/error'>
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
+    </AuthWrapper>
   );
 }
 
