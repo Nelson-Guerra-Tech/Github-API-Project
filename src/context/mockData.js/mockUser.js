@@ -28,7 +28,7 @@ export default {
   location: 'Atlanta, Georgia',
   email: null,
   hireable: null,
-  bio: '💻 Web Developer 🇺🇸 Veteran 🧠 Learning New Things',
+  bio: '💻 Software Developer 🇺🇸 Veteran 🧠 Learning New Things',
   twitter_username: 'nelson_guerra',
   public_repos: 152,
   public_gists: 5,
