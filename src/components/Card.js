@@ -50,6 +50,10 @@ const Wrapper = styled.article`
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   position: relative;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
   &::before {
     content: 'user';
     position: absolute;
@@ -64,6 +68,10 @@ const Wrapper = styled.article`
     padding: 0.5rem 1rem 0 1rem;
     letter-spacing: var(--spacing);
     font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    :hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
   }
   header {
     display: grid;

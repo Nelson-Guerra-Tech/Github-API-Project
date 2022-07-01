@@ -32,6 +32,10 @@ const Wrapper = styled.article`
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   position: relative;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
   &::before {
     content: ' followers';
