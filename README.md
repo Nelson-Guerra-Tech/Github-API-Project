@@ -1,2 +1,2 @@
 # Github-API-Project
-![Screen Shot 2022-07-02 at 5 15 25 PM](https://user-images.githubusercontent.com/62409790/177016591-a90ffc4f-ce3b-4aa4-ab12-ca361ef87802.png)
+![Screen Shot 2022-07-02 at 5 56 32 PM](https://user-images.githubusercontent.com/62409790/177017194-1d2666a2-e367-494f-8386-b910fd26013a.png)
