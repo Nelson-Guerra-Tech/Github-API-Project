@@ -1,18 +1,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer Project Management App ✨</h1>
+  <h1 align="center">Github API User Finder ✨</h1>
 
   <p align="center">
-    It is a React application for users to track their expenses. The expense tracker uses Firebase as the backend and allows users to create their own account by email and password, that way each user can privately track expenses. Site URL / Demo: 
-    <a href="https://expense-tracker-3fa3a.web.app/login">https://expense-tracker-3fa3a.web.app/login</a>
+    It is a React Github Finder application that uses Auth0 as the backend for the user authentication, and the Github API to fetch data about users. Users can sign-up by email or they can sign-in with Google. Site URL / Demo: 
+    <a href="https://react-github-finder-api.netlify.app/login">https://react-github-finder-api.netlify.app/login</a>
     <br />
     <br />
     <a href="https://nelson-guerra.tech">About Me</a>
   </p>
 </p>
 
-[![Site preview](/public/social-image.png)](https://expense-tracker-3fa3a.web.app/login)
+[![Site preview](/public/social-image.png)](https://react-github-finder-api.netlify.app/login)
 
 ## Table of Contents
 
